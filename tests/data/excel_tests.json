@@ -1,0 +1,85 @@
+[
+    {
+        "sheet_name": "normal",
+        "expected_start_row": 1,
+        "values": [
+            ["index","table_name","description"],
+            [1,"new_table","descr1"],
+            [2,"another_table","descr2"]
+        ],
+        "table": [
+            {
+                "displayName": "main_table",
+                "ref": "A1:C3"
+            }
+        ]
+    },
+    {
+        "sheet_name": "lower_tbl",
+        "expected_start_row": 3,
+        "values": [
+            [null, null, null],
+            [null, null, null],
+            ["index","table_name","description"],
+            [1,"new_table","descr1"],
+            [2,"another_table","descr2"]
+        ]
+    }, 
+    {
+        "sheet_name": "data_on_left",
+        "expected_start_row": 4,
+        "values": [
+            [null, null, null],
+            [null, null, null], 
+            [null, null, null], 
+            ["index","table_name","description", null, "additional data"],
+            [1,"new_table","descr1"],
+            [2,"another_table","descr2"]
+        ]
+    },
+    {
+        "sheet_name": "accounting_format",
+        "expected_start_row": 1,
+        "values": [ 
+            ["index","table_name","description"],
+            [1, "Total New Table Values",null],
+            [2,"new_table","descr1"],
+            [3,"another_table","descr2"]
+        ],
+        "modifications": 
+            [
+                {"row": 2,"col":2,"indent":1},
+                {"row": 1,"col":1,"border": {"type": "bottom","color": "FF000000","style": "thin"}},
+                {"row": 1,"col":2,"border": {"type": "bottom","color": "FF000000","style": "thin"}},
+                {"row": 1,"col":3,"border": {"type": "bottom","color": "FF000000","style": "thin"}}
+            ]
+    },
+    {
+        "sheet_name": "extra_data",
+        "expected_start_row": 3,
+        "values": [
+            [null, null, null],
+            [null, null, null], 
+            [null, null, null], 
+            ["index","table_name","description", null, "additional data"],
+            [1,"new_table","descr1"],
+            [2,"another_table","descr2"]
+        ]
+    },
+    {
+        "sheet_name": "multiple_tables",
+        "expected_start_row": 3,
+        "values": [
+            [null, null, null],
+            [null, null, null], 
+            [null, null, null], 
+            [1,"new_table","descr1"],
+            [2,"another_table","descr2"],
+            [null, null, null],
+            [null, null, null], 
+            [1,"new_table","descr1"],
+            [2,"another_table","descr2"]
+
+        ]
+    }
+]
